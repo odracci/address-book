@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-offset-2 col-lg-8">
+        <a href="#/contact/new" class="btn btn-success pull-right">New contact</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Zip code</th>
+                    <th>Country</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contact in contacts">
+                    <td>{{contact.firstName}} {{contact.lastName}}</td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.address}}</td>
+                    <td>{{contact.city}}</td>
+                    <td>{{contact.zipCode}}</td>
+                    <td>{{contact.country}}</td>
+                    <td><a href="#/contact/{{contact.id}}/edit" class="btn btn-primary btn-xs">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
